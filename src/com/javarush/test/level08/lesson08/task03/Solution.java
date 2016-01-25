@@ -32,7 +32,11 @@ public class Solution
 
     public static int getCountTheSameFirstName(HashMap<String, String> map, String name)
     {
-        for (Map.Entry<String, String>) map = new HashMap<String, String>();
+        for (Map.Entry<String, String> pair = new HashMap<String, String>())
+        {
+
+
+        }
         //напишите тут ваш код
 
     }
