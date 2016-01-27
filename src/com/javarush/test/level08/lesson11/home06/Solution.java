@@ -13,9 +13,12 @@ public class Solution
     public static void main(String[] args)
     {
         ArrayList<Human> chil = new ArrayList<Human>();
-        chil.add(new Human("qwer", true, 5, null));
-        chil.add(new Human("zerg", false, 6, null));
-        chil.add(new Human("ork", true, 2, null));
+        Human qwer = new  Human("qwer", true, 5);
+        Human zerg =new Human("zerg", false, 6);
+        Human ork =new Human("ork", true, 2);
+        chil.add(qwer);
+        chil.add(zerg);
+        chil.add(ork);
 
         Human pap = new Human("pap",true,55,chil);
         Human mam = new Human("mam",false,50,chil);
@@ -24,9 +27,22 @@ public class Solution
         pm.add(pap);
         pm.add(mam);
 
-        Human
+        Human gf1 =new Human("ded1",true,90,pm);
+        Human gf2 =new Human("ded2",true,92,pm);
+        Human gm1 =new Human("bab1",false,91,pm);
+        Human gm2 =new Human("bab1",false,95,pm);
 
         System.out.println(pap);
+        System.out.println(mam);
+        System.out.println(gf1);
+        System.out.println(gf2);
+        System.out.println(gm1);
+        System.out.println(gm2);
+        System.out.println(qwer);
+        System.out.println(zerg);
+        System.out.println(ork);
+
+
 
         //напишите тут ваш код
     }
@@ -44,6 +60,13 @@ public class Solution
             this.sex = sex;
             this.age = age;
             this.children = children;
+        }
+        public Human(String name, boolean sex, int age)
+        {
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+
         }
         //напишите тут ваш код
 
