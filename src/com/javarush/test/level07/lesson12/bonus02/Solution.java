@@ -7,7 +7,10 @@ import java.util.ArrayList;
 
 /* Нужно заменить функциональность программы
 Задача:  Программа вводит строки, пока пользователь не введёт пустую строку (нажав enter). Потом она конвертирует строки в верхний регистр (Мама превращается в МАМА) и выводит их на экран.
-Новая задача: Программа вводит строки, пока пользователь не введёт пустую строку (нажав enter).
+
+
+Новая задача: Программа вводит строки, пока пользователь не введёт пустую строку (нажав enter).+
+
 Потом программа строит новый список. Если в строке чётное число букв, строка удваивается, если нечётное – утраивается.
 Программа выводит содержимое нового списка на экран.
 Пример ввода:
@@ -34,16 +37,19 @@ public class Solution
             list.add(s);
         }
 
-        ArrayList<String> listUpperCase = new ArrayList<String>();
+        ArrayList<String> newlist = new ArrayList<String>();
         for (int i = 0; i < list.size(); i++)
         {
-            String s = list.get(i);
-            listUpperCase.add(s.toUpperCase());
-        }
+            if ((list.get(i).length() % 2) == 0)
 
-        for (int i = 0; i < listUpperCase.size(); i++)
-        {
-            System.out.println(listUpperCase.get(i));
+                newlist.add(i, list.get(i)+" "+list.get(i));
+
+            else
+                newlist.add(i, list.get(i)+" "+list.get(i)+" "+list.get(i));
+
         }
+            for (String a : newlist)
+                System.out.println(a);
+
     }
 }
