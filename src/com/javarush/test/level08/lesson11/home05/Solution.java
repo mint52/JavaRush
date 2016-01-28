@@ -23,6 +23,11 @@ public class Solution
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
 
+        String[] words = s.split(" ");
+
+
+
+
 
         //напишите тут ваш код
     }
