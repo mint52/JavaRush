@@ -1,10 +1,10 @@
-package com.javarush.test.level07.lesson12.bonus03;
+package com.javarush.test.level08.lesson11.home08;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-/* Задача по алгоритмам
-Задача: Написать программу, которая вводит с клавиатуры 20 чисел и выводит их в убывающем порядке.
+/* Пять наибольших чисел
+Создать массив на 20 чисел. Заполнить его числами с клавиатуры. Вывести пять наибольших чисел.
 */
 
 public class Solution
@@ -13,17 +13,18 @@ public class Solution
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int[] array = new int[20];
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < array.length; i++)
         {
             array[i] = Integer.parseInt(reader.readLine());
         }
 
         sort(array);
 
-        for (int x : array)
-        {
-            System.out.println(x);
-        }
+        System.out.println(array[0]);
+        System.out.println(array[1]);
+        System.out.println(array[2]);
+        System.out.println(array[3]);
+        System.out.println(array[4]);
     }
 
     public static void sort(int[] array)
