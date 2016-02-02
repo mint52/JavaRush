@@ -21,9 +21,9 @@ public class Solution
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String a = reader.readLine();
-        char[] c = ch
 
-        isVowel();
+
+
         //напишите тут ваш код
     }
 
