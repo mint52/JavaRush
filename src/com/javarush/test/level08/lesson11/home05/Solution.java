@@ -22,7 +22,16 @@ public class Solution
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
+        char[] mass = s.toCharArray();
+    for (int i = 0; i <mass.length;i++)
+    {
+        if (Character.isSpaceChar(mass[i]))
+            mass[i+1] = Character.toUpperCase(mass[i+1]);
+        else ;
 
+    }
+
+        System.out.println(mass);
         //напишите тут ваш код
     }
 

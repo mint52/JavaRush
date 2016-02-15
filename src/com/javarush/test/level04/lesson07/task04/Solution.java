@@ -20,8 +20,18 @@ public class Solution
     public static void main(String[] args) throws Exception
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-        int a = Integer.parseInt(reader.readLine());
+        int count1 = 0;
+        int count2 =0;
+        for (int i = 0; i <3;i++)
+        {
+            int a = Integer.parseInt(reader.readLine());
+            if (a>=0)
+                count1++;
+            else count2++;
+        }
+        System.out.println("количество отрицательных чисел: "+count2);
+        System.out.println("количество положительных чисел: "+count1);
+     /*   int a = Integer.parseInt(reader.readLine());
         int b = Integer.parseInt(reader.readLine());
         int c = Integer.parseInt(reader.readLine());
 
@@ -41,7 +51,7 @@ public class Solution
             o++;
         System.out.println("количество отрицательных чисел: "+o);
         System.out.println("количество положительных чисел: "+p);
-        //напишите тут ваш код
+        //напишите тут ваш код */
 
     }
 }

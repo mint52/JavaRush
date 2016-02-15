@@ -11,10 +11,18 @@ import java.util.Locale;
 Вывести на экран эту дату в виде «AUG 18, 2013».
 Воспользоваться объектом Date и SimpleDateFormat.
 */
-
 public class Solution {
 
     public static void main(String[] args) throws Exception {
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        SimpleDateFormat format = new SimpleDateFormat("MMM dd, yyyy", Locale.ENGLISH );
+
+        Date date = new Date(reader.readLine());
+        System.out.println(format.format(date).toUpperCase());
+
+
         //напишите тут ваш код
     }
 }
