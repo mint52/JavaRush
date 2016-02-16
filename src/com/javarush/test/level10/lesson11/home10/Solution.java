@@ -17,7 +17,7 @@ public class Solution
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         ArrayList<Integer> list = new ArrayList<Integer>();
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 7; i++)
         {
             int x = Integer.parseInt(reader.readLine());
             list.add(x);
@@ -30,9 +30,18 @@ public class Solution
 
     public static int safeGetElement(ArrayList<Integer> list, int index, int defaultValue)
     {
+        Integer a = 0;
+        try
+        {
+            a = list.get(index);
+        }
+        catch (IndexOutOfBoundsException e)
+        {
 
-      //напишите тут ваш код
-        return index;
+            a = defaultValue;
+        }
+
+    return a;
     }
 
 }

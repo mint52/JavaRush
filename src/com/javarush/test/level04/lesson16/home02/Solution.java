@@ -18,6 +18,7 @@ public class Solution
 
         Arrays.sort(a);
 
+
         System.out.println(a[1]);
 
 

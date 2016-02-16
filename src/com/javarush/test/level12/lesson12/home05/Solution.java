@@ -21,14 +21,15 @@ public class Solution
 
     public static String getObjectType(Object o)
     {
-        if (o instanceof Cat)
-            return "Кот";
+
         if (o instanceof Tiger)
             return "Тигр";
         if (o instanceof Lion)
             return "Лев";
         if (o instanceof Bull)
             return "Бык";
+        if (o instanceof Cat)
+            return "Кот";
         if (o instanceof Cow)
             return "Корова";
         else return "Животное";
