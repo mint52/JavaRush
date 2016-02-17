@@ -13,19 +13,21 @@ public class Solution
     public static void main(String[] args) throws IOException
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String S = reader.readLine();
-        OutputStream os = new FileOutputStream(S);
+        String Fpatch = reader.readLine();
 
+        FileWriter writer = new FileWriter(Fpatch);
         while (true)
         {
             String s = reader.readLine();
-            if (s.equals("exit"));
+            if (s.equals("exit"))
             {
-               break;
+                writer.write(s);
+                break;
             }
-            //int data = s.;
-            //os.write(data);
+            writer.write(s);
+            writer.write(System.lineSeparator());
         }
+        writer.flush();
 
 
     }
