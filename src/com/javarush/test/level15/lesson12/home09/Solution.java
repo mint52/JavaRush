@@ -36,6 +36,7 @@ public class Solution {
         {
             s = reader.readLine();
 
+
         }
         catch (IOException e)
         {
