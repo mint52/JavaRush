@@ -4,7 +4,7 @@ package com.javarush.test.level15.lesson09.task04;
 В статическом блоке выбросьте RuntimeException
 В результате класс не загрузится, и вы увидите сообщение об ошибке вместо значения переменной B
 
-Exception in thread "main" java.lang.ExceptionInInitializerError
+exception in thread "main" java.lang.ExceptionInInitializerError
 at java.lang.Class.forName0(Native Method)
 at java.lang.Class.forName(Class.java:186)
 at com.intellij.rt.execution.application.AppMain.main(AppMain.java:113)

@@ -20,9 +20,20 @@ public class Solution
     public static void main(String[] args) throws Exception
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String a = reader.readLine();
+        String gl = "";
+        String sogl = "";
+        char[] line = reader.readLine().toCharArray();
+        for (int i = 0; i <line.length ; i++) {
 
+            if (line[i] != ' ') {
+                if (isVowel(line[i]))
+                    gl += line[i] + " ";
+                else sogl+=line[i]+" ";
+            }
+        }
 
+        System.out.println(gl);
+        System.out.println(sogl);
 
         //напишите тут ваш код
     }

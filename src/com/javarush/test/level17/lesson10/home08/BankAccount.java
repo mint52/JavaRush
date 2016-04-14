@@ -3,7 +3,7 @@ package com.javarush.test.level17.lesson10.home08;
 import java.math.BigDecimal;
 
 public class BankAccount {
-    private BigDecimal balance;
+    private  BigDecimal balance;
     private String owner;
 
     public BankAccount(String owner) {
@@ -15,7 +15,7 @@ public class BankAccount {
         this.owner = owner;
     }
 
-    public void deposit(BigDecimal money) {
+    public synchronized void deposit(BigDecimal money) {
         BigDecimal newBalance = balance.add(money);
         System.out.println("Добавляем " + money + ", на счету " + newBalance);
         balance = newBalance;

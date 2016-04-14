@@ -7,7 +7,7 @@ doubleVar с типом double
 DoubleVar с типом Double
 booleanVar с типом boolean
 ObjectVar с типом Object
-ExceptionVar с типом Exception
+ExceptionVar с типом exception
 StringVar с типом String
 2. В методе main вывести их значения в заданном порядке.
 */

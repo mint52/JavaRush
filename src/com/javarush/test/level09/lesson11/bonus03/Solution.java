@@ -50,6 +50,38 @@ public class Solution
 
     public static void sort(String[] array)
     {
+
+        for (int i = 0; i <array.length-1 ; i++) {
+            if (isNumber(array[i]))
+            {
+                for (int j = i+1; j <array.length ; j++) {
+                    if (isNumber(array[j])) {
+                        int ii = Integer.parseInt(array[i]);
+                        int jj = Integer.parseInt(array[j]);
+
+                        if (ii < jj) {
+                            String temp = array[i];
+                            array[i] = array[j];
+                            array[j] = temp;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                for (int j = i+1; j <array.length ; j++) {
+                    if (!isNumber(array[j]))
+                    {
+                        if (isGreaterThan(array[i], array[j])) {
+                            String temp = array[i];
+                            array[i] = array[j];
+                            array[j] = temp;
+                        }
+
+                    }
+                }
+            }
+        }
         //напишите тут ваш код
     }
 

@@ -16,7 +16,7 @@ package com.javarush.test.level17.lesson10.home08;
 
 public class Bankomat {
 
-    static BankAccount account = new BankAccount("Amigo");
+    static  BankAccount account = new BankAccount("Amigo");
 
     public static volatile boolean isStopped;
 

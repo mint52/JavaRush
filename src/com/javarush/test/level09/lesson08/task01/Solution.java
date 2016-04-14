@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
 
 /* Исключения
-Есть метод, который выбрасывает два исключения, унаследованные от Exception, и два унаследованных от RuntimeException:
+Есть метод, который выбрасывает два исключения, унаследованные от exception, и два унаследованных от RuntimeException:
 NullPointerException, ArithmeticException, FileNotFoundException, URISyntaxException.
 
 Нужно перехватить NullPointerException и FileNotFoundException, но не перехватывать

@@ -1,8 +1,8 @@
 package com.javarush.test.level09.lesson08.task02;
 
 /* Перехватывание исключений
-1. Есть три исключения последовательно унаследованные от Exception:
-2. class Exception1 extends  Exception
+1. Есть три исключения последовательно унаследованные от exception:
+2. class Exception1 extends  exception
 3. class Exception2 extends  Exception1
 4. class Exception3 extends  Exception2
 5. Есть метод, который описан так:
