@@ -1,8 +1,12 @@
 package com.javarush.test.level31.lesson06.home01;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
@@ -34,14 +38,33 @@ public class Solution {
     public static void main(String[] args) throws IOException {
 
         // String filename = args[0];
-        String filename = "d:/123.zip";
+        String filename = "d:/log.txt";
+        String zip = "d:/123.zip";
+        String zip2 = "d:/1.zip";
 
-        try (ZipInputStream zis = new ZipInputStream(new FileInputStream(""));
-             ZipOutputStream zout = new ZipOutputStream(new FileOutputStream(""));
-             FileInputStream fis = new FileInputStream(filename))
+        Map<String, ByteArrayOutputStream> map = new HashMap<>();
 
-        {
+        try (ZipInputStream zis = new ZipInputStream(new FileInputStream(zip));
+             FileInputStream fis = new FileInputStream(filename)) {
 
+            ZipEntry entry;
+            String name;
+            while ((entry = zis.getNextEntry()) != null) {
+                byte[] buffer = new byte[4];
+                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                while (fis.read(buffer)!= -1)
+                {
+                    byteArrayOutputStream.write(buffer);
+                }
+                map.put(entry.getName(),byteArrayOutputStream);
+            }
+        }
+
+        try (ZipOutputStream zout = new ZipOutputStream(new FileOutputStream(zip2))) {
+            for (Map.Entry<String, ByteArrayOutputStream> pair : map.entrySet()) {
+                zout.putNextEntry(new ZipEntry(pair.getKey()));
+                zout.write(pair.getValue().toByteArray());
+            }
         }
     }
 }
