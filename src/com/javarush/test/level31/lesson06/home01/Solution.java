@@ -33,7 +33,8 @@ b.txt
 public class Solution {
     public static void main(String[] args) throws IOException {
 
-        String filename = args[0];
+        // String filename = args[0];
+        String filename = "d:/123.zip";
 
         try (ZipInputStream zis = new ZipInputStream(new FileInputStream(""));
              ZipOutputStream zout = new ZipOutputStream(new FileOutputStream(""));
