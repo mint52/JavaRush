@@ -1,6 +1,10 @@
 package com.javarush.test.level31.lesson06.home01;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.zip.ZipInputStream;
+import java.util.zip.ZipOutputStream;
 
 /* Добавление файла в архив
 В метод main приходит список аргументов.
@@ -28,5 +32,15 @@ b.txt
 */
 public class Solution {
     public static void main(String[] args) throws IOException {
+
+        String filename = args[0];
+
+        try (ZipInputStream zis = new ZipInputStream(new FileInputStream(""));
+             ZipOutputStream zout = new ZipOutputStream(new FileOutputStream(""));
+             FileInputStream fis = new FileInputStream(filename))
+
+        {
+
+        }
     }
 }
